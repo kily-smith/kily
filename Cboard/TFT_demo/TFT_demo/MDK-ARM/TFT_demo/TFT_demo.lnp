@@ -1,5 +1,7 @@
 --cpu=Cortex-M4.fp.sp
 "tft_demo\startup_stm32f407xx.o"
+"tft_demo\st7735.o"
+"tft_demo\fonts.o"
 "tft_demo\main.o"
 "tft_demo\gpio.o"
 "tft_demo\spi.o"

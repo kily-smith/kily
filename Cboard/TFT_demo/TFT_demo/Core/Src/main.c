@@ -23,7 +23,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "st7735.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -74,7 +74,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
+  ST7735_Init (); 
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -98,6 +98,21 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  
+	    ST7735_FillScreen(ST7735_RED);
+		HAL_Delay(500);
+		ST7735_FillScreen(ST7735_GREEN);
+		HAL_Delay(500);
+		ST7735_FillScreen(ST7735_BLUE);
+		HAL_Delay(500);
+
+	  
+//	  HAL_GPIO_WritePin (LED_B_GPIO_Port ,LED_B_Pin ,GPIO_PIN_SET );
+//	  HAL_GPIO_WritePin (SPI2_BLK_GPIO_Port ,SPI2_BLK_Pin ,GPIO_PIN_SET );
+//	  HAL_Delay (200);
+//	  HAL_GPIO_WritePin (LED_B_GPIO_Port ,LED_B_Pin ,GPIO_PIN_RESET );
+//	  //HAL_GPIO_WritePin (SPI2_BLK_GPIO_Port ,SPI2_BLK_Pin ,GPIO_PIN_RESET );
+//	  HAL_Delay (200);
   }
   /* USER CODE END 3 */
 }

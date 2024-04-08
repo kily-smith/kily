@@ -31,3 +31,6 @@ tft_demo\main.o: C:/Users/smith/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Dri
 tft_demo\main.o: C:/Users/smith/STM32Cube/Repository/STM32Cube_FW_F4_V1.28.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 tft_demo\main.o: ../Core/Inc/spi.h
 tft_demo\main.o: ../Core/Inc/gpio.h
+tft_demo\main.o: ../Core/Inc/st7735.h
+tft_demo\main.o: ../Core/Inc/fonts.h
+tft_demo\main.o: C:\Keil_v5.36\ARM\ARMCC\Bin\..\include\stdio.h
