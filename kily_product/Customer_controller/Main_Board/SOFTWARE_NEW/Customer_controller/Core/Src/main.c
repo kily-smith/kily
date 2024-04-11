@@ -111,27 +111,23 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  	 HAL_GPIO_WritePin (SPI1_BL_GPIO_Port ,SPI1_BL_Pin ,GPIO_PIN_RESET );
-		ST7735_FillScreen(ST7735_RED);
-		HAL_Delay(500);
-		ST7735_FillScreen(ST7735_GREEN);
-		HAL_Delay(500);
-		ST7735_FillScreen(ST7735_BLUE);
-		HAL_Delay(500);
+//	  	HAL_GPIO_WritePin (SPI1_BL_GPIO_Port ,SPI1_BL_Pin ,GPIO_PIN_RESET );
+//		ST7735_FillScreen(ST7735_RED);
+//		HAL_Delay(500);
+//		ST7735_FillScreen(ST7735_GREEN);
+//		HAL_Delay(500);
+//		ST7735_FillScreen(ST7735_BLUE);
+//		HAL_Delay(500);		//st7735屏幕显示
 
-		HAL_GPIO_WritePin (RS485_DE_GPIO_Port ,RS485_DE_Pin ,GPIO_PIN_SET);
+	  //HAL_GPIO_WritePin (RS485_DE_GPIO_Port ,RS485_DE_Pin ,GPIO_PIN_SET);  //RS485_DE 使能
 	  HAL_GPIO_WritePin (RGB_G_GPIO_Port ,RGB_G_Pin ,GPIO_PIN_RESET );
-	  HAL_GPIO_WritePin (LED_GPIO_Port ,LED_Pin ,GPIO_PIN_SET );
-
 	  HAL_Delay (600);
 	  HAL_GPIO_WritePin (RGB_G_GPIO_Port ,RGB_G_Pin ,GPIO_PIN_SET );
-	  HAL_GPIO_WritePin (LED_GPIO_Port ,LED_Pin ,GPIO_PIN_RESET );
-	  //HAL_GPIO_WritePin (SPI1_BL_GPIO_Port ,SPI1_BL_Pin ,GPIO_PIN_RESET );
-	  HAL_Delay (500);
+	  //HAL_GPIO_WritePin (SPI1_BL_GPIO_Port ,SPI1_BL_Pin ,GPIO_PIN_RESET );  //IPS背光使能
+	  //HAL_Delay (500);
+	  HAL_UART_Transmit(&huart1, "RoboMaster\r\n", 12, 100);
+      HAL_Delay(100);
 	  
-	  
-	  HAL_UART_Transmit(&huart2, "RoboMaster\r\n", 12, 100);
-        HAL_Delay(100);
 //	  HAL_UART_Transmit (&huart1,p[0],1,500);
 //	   HAL_UART_Transmit (&huart1,(uint8_t *)p,8,500);
 //	void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
