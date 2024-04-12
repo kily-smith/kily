@@ -1,0 +1,28 @@
+--cpu Cortex-M3
+"0.96lcd_demo\startup_stm32f103xb.o"
+"0.96lcd_demo\fonts.o"
+"0.96lcd_demo\st7735.o"
+"0.96lcd_demo\main.o"
+"0.96lcd_demo\gpio.o"
+"0.96lcd_demo\spi.o"
+"0.96lcd_demo\stm32f1xx_it.o"
+"0.96lcd_demo\stm32f1xx_hal_msp.o"
+"0.96lcd_demo\stm32f1xx_hal_gpio_ex.o"
+"0.96lcd_demo\stm32f1xx_hal_spi.o"
+"0.96lcd_demo\stm32f1xx_hal.o"
+"0.96lcd_demo\stm32f1xx_hal_rcc.o"
+"0.96lcd_demo\stm32f1xx_hal_rcc_ex.o"
+"0.96lcd_demo\stm32f1xx_hal_gpio.o"
+"0.96lcd_demo\stm32f1xx_hal_dma.o"
+"0.96lcd_demo\stm32f1xx_hal_cortex.o"
+"0.96lcd_demo\stm32f1xx_hal_pwr.o"
+"0.96lcd_demo\stm32f1xx_hal_flash.o"
+"0.96lcd_demo\stm32f1xx_hal_flash_ex.o"
+"0.96lcd_demo\stm32f1xx_hal_exti.o"
+"0.96lcd_demo\stm32f1xx_hal_tim.o"
+"0.96lcd_demo\stm32f1xx_hal_tim_ex.o"
+"0.96lcd_demo\system_stm32f1xx.o"
+--strict --scatter "0.96lcd_demo\0.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "0.map" -o 0.96lcd_demo\0.96lcd_demo
