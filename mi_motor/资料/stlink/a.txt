@@ -1,0 +1,4 @@
+
+
+
+sudo ./st-flash write /home/yongjun/work/xiaomi_robot_motor/my_motorcontrol/build/motorcontrol.bin 0x8000000

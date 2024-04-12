@@ -1,0 +1,3 @@
+代码已支持跨平台，
+linux平台编译时，先根据自己的平台更新工程目录LysUsbcanQtDemo\USBCAN\lib\linux里的库文件，
+库文件不匹配会会出现编译错误。

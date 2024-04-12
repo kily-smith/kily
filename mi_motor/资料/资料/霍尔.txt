@@ -1,0 +1,12 @@
+PC5  U11         ADC01_IN5
+PA4  U6          ADC01_IN4
+PA6  U8          ADC01_IN6
+PC4  U10         ADC01_IN14
+PA7  U9          ADC01_IN7
+PA5  U7          ADC01_IN15
+
+    U9--U7
+   /      \
+ U10      U11
+   \      /
+    U8--U6
