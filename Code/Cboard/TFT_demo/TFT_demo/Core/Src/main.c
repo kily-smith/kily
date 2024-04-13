@@ -74,7 +74,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  //ST7735_Init (); 
+  ST7735_Init (); 
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -88,7 +88,7 @@ int main(void)
   MX_GPIO_Init();
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
-ST7735_Init (); 
+  ST7735_Init (); 
   /* USER CODE END 2 */
 
   /* Infinite loop */
