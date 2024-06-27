@@ -32,3 +32,5 @@ doubl_switch_buck_converter\usb.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx
 doubl_switch_buck_converter\usb.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pcd_ex.h
 doubl_switch_buck_converter\usb.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h
 doubl_switch_buck_converter\usb.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h
+doubl_switch_buck_converter\usb.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h
+doubl_switch_buck_converter\usb.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h

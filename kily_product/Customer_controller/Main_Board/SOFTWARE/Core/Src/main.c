@@ -114,8 +114,9 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  
-	   ///*仿FOC显示***********************************************************************
+
+		
+	  // /*仿FOC显示***********************************************************************
 	ST7735_DrawString(0, 0, "[INIT]", ST7735_YELLOW, ST7735_BLACK, &Font_11x18);
 						//ST7735_DrawString(0, 0, "abcdefghigklim", ST7735_YELLOW, ST7735_BLACK, &Font_8x10);
 						//ST7735_DrawString(0, 20, "abcdefghigklim", ST7735_YELLOW, ST7735_BLACK, &Font_7x10);

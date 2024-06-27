@@ -6,14 +6,14 @@
 #include "fonts.h"
 #include "stdio.h"
 
-#define ST7735_RST_Pin SPI1_RST_Pin
-#define ST7735_RST_GPIO_Port SPI1_RST_GPIO_Port
-#define ST7735_DC_Pin SPI1_DC_Pin
-#define ST7735_DC_GPIO_Port SPI1_DC_GPIO_Port
-#define ST7735_CS_Pin SPI1_CS_Pin
-#define ST7735_CS_GPIO_Port SPI1_CS_GPIO_Port
+#define ST7735_RST_Pin SPI2_RST_Pin
+#define ST7735_RST_GPIO_Port SPI2_RST_GPIO_Port
+#define ST7735_DC_Pin SPI2_DC_Pin
+#define ST7735_DC_GPIO_Port SPI2_DC_GPIO_Port
+#define ST7735_CS_Pin SPI2_CS_Pin
+#define ST7735_CS_GPIO_Port SPI2_CS_GPIO_Port
 
-#define ST7735_SPI_INSTANCE hspi1
+#define ST7735_SPI_INSTANCE hspi2
 // Screen Direction1
 #define ST7735_XSTART 1//26
 #define ST7735_YSTART 26
