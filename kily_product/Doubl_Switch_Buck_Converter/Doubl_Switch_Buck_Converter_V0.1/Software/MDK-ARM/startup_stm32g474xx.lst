@@ -821,11 +821,11 @@ ARM Macro Assembler    Page 13
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=
 interwork --depend=doubl_switch_buck_converter\startup_stm32g474xx.d -odoubl_sw
 itch_buck_converter\startup_stm32g474xx.o -I.\RTE\_Doubl_Switch_Buck_Converter 
--IC:\Keil_v5\ARM\Pack\ARM\CMSIS\4.5.0\CMSIS\Include -IC:\Keil_v5\ARM\Pack\Keil\
-STM32G4xx_DFP\1.5.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include --predefine="__UV
-ISION_VERSION SETA 539" --predefine="_RTE_ SETA 1" --predefine="STM32G474xx SET
-A 1" --predefine="_RTE_ SETA 1" --list=startup_stm32g474xx.lst startup_stm32g47
-4xx.s
+-IC:\Users\smith\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include -IC
+:\Users\smith\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.6.0\Drivers\CMSIS\De
+vice\ST\STM32G4xx\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VE
+RSION SETA 534" --predefine="_RTE_ SETA 1" --predefine="STM32G474xx SETA 1" --p
+redefine="_RTE_ SETA 1" --list=startup_stm32g474xx.lst startup_stm32g474xx.s
 
 
 
@@ -2127,4 +2127,4 @@ Symbol: __use_two_region_memory
       None
 Comment: __use_two_region_memory unused
 3 symbols
-468 symbols in table
+469 symbols in table
