@@ -108,8 +108,12 @@ int main(void)
     /* USER CODE BEGIN 3 */
 
 
-		
-		   /*?FOC??***********************************************************************
+	  HAL_GPIO_WritePin (LED_BLUE_GPIO_Port ,LED_BLUE_Pin ,GPIO_PIN_RESET );
+	  HAL_Delay (100);
+	  HAL_GPIO_WritePin (LED_BLUE_GPIO_Port ,LED_BLUE_Pin ,GPIO_PIN_SET );
+	  HAL_Delay (100);
+	  
+			///*?FOC??***********************************************************************
 	ST7735_DrawString(0, 0, "[INIT]", ST7735_YELLOW, ST7735_BLACK, &Font_11x18);
 						//ST7735_DrawString(0, 0, "abcdefghigklim", ST7735_YELLOW, ST7735_BLACK, &Font_8x10);
 						//ST7735_DrawString(0, 20, "abcdefghigklim", ST7735_YELLOW, ST7735_BLACK, &Font_7x10);
@@ -124,20 +128,23 @@ int main(void)
 	ST7735_DrawString(0, 0, "[INIT]", ST7735_YELLOW, ST7735_BLACK, &Font_11x18);
 	  
 
-	ST7735_DrawString(0, 20, "V[", ST7735_RED, ST7735_BLACK, &Font_11x18);
-	ST7735_DrawString(20, 20, "0.0V", ST7735_WHITE, ST7735_BLACK, &Font_11x18);
-	ST7735_DrawString(65, 20, "]I[", ST7735_RED, ST7735_BLACK, &Font_11x18);
-	ST7735_DrawString(95, 20, "0.0A", ST7735_WHITE, ST7735_BLACK, &Font_11x18);
-	ST7735_DrawString(140, 20, "]", ST7735_RED, ST7735_BLACK, &Font_11x18);
+	ST7735_DrawString(0, 21, "OUT", ST7735_RED, ST7735_BLACK, &Font_11x18);
+	ST7735_DrawString(40, 21, "88.8", ST7735_GREEN, ST7735_BLACK, &Font_11x18);
+	ST7735_DrawString(85, 21, "V", ST7735_BLUE, ST7735_BLACK, &Font_11x18);
+	ST7735_DrawString(110, 21, "8.8", ST7735_GREEN, ST7735_BLACK, &Font_11x18);
+	ST7735_DrawString(145, 21, "A", ST7735_BLUE, ST7735_BLACK, &Font_11x18);
 
 	ST7735_DrawString(0, 40, "Current Mode :", ST7735_WHITE, ST7735_BLACK, &Font_7x10);
 	ST7735_DrawString(110, 40, "BUCK", ST7735_YELLOW, ST7735_BLACK, &Font_7x10);
-	ST7735_DrawString(0, 50, "CAN : OK!", ST7735_WHITE, ST7735_BLACK, &Font_7x10);
-	ST7735_DrawString(0, 60, "USART : OK!", ST7735_WHITE, ST7735_BLACK, &Font_7x10);
- 	ST7735_DrawString(0, 70, "USB : OK!", ST7735_WHITE, ST7735_BLACK, &Font_7x10);
+	ST7735_DrawString(0, 50, "CAN   : ", ST7735_WHITE, ST7735_BLACK, &Font_7x10);
+	ST7735_DrawString(60, 50, "OK!", ST7735_GREEN, ST7735_BLACK, &Font_7x10);
+	ST7735_DrawString(0, 60, "USART : ", ST7735_WHITE, ST7735_BLACK, &Font_7x10);
+	ST7735_DrawString(60, 60, "OK!", ST7735_GREEN, ST7735_BLACK, &Font_7x10);
+ 	ST7735_DrawString(0, 70, "USB   : ", ST7735_WHITE, ST7735_BLACK, &Font_7x10);
+	ST7735_DrawString(60, 70, "OK! *-*", ST7735_GREEN, ST7735_BLACK, &Font_7x10);
 	
 		// *************************************************************************/
-			ST7735_DrawImage(0, 0, uint16_t width, uint16_t height, const uint8_t *image)
+		ST7735_DrawImage(120,50, 30,30, gImage_011);
 		
   }
   /* USER CODE END 3 */

@@ -6,7 +6,7 @@ doubl_switch_buck_converter\stm32g4xx_hal_rcc_ex.o: ../Drivers/STM32G4xx_HAL_Dri
 doubl_switch_buck_converter\stm32g4xx_hal_rcc_ex.o: ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h
 doubl_switch_buck_converter\stm32g4xx_hal_rcc_ex.o: ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h
 doubl_switch_buck_converter\stm32g4xx_hal_rcc_ex.o: ../Drivers/CMSIS/Include/core_cm4.h
-doubl_switch_buck_converter\stm32g4xx_hal_rcc_ex.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+doubl_switch_buck_converter\stm32g4xx_hal_rcc_ex.o: C:\Keil_v5.36\ARM\ARMCC\Bin\..\include\stdint.h
 doubl_switch_buck_converter\stm32g4xx_hal_rcc_ex.o: ../Drivers/CMSIS/Include/cmsis_version.h
 doubl_switch_buck_converter\stm32g4xx_hal_rcc_ex.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 doubl_switch_buck_converter\stm32g4xx_hal_rcc_ex.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -14,7 +14,7 @@ doubl_switch_buck_converter\stm32g4xx_hal_rcc_ex.o: ../Drivers/CMSIS/Include/mpu
 doubl_switch_buck_converter\stm32g4xx_hal_rcc_ex.o: ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h
 doubl_switch_buck_converter\stm32g4xx_hal_rcc_ex.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h
 doubl_switch_buck_converter\stm32g4xx_hal_rcc_ex.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-doubl_switch_buck_converter\stm32g4xx_hal_rcc_ex.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+doubl_switch_buck_converter\stm32g4xx_hal_rcc_ex.o: C:\Keil_v5.36\ARM\ARMCC\Bin\..\include\stddef.h
 doubl_switch_buck_converter\stm32g4xx_hal_rcc_ex.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h
 doubl_switch_buck_converter\stm32g4xx_hal_rcc_ex.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h
 doubl_switch_buck_converter\stm32g4xx_hal_rcc_ex.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h
