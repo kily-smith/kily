@@ -113,7 +113,7 @@ int main(void)
 	  HAL_GPIO_WritePin (LED_BLUE_GPIO_Port ,LED_BLUE_Pin ,GPIO_PIN_SET );
 	  HAL_Delay (100);
 	  
-			///*?FOC??***********************************************************************
+			/*?FOC??***********************************************************************
 	ST7735_DrawString(0, 0, "[INIT]", ST7735_YELLOW, ST7735_BLACK, &Font_11x18);
 						//ST7735_DrawString(0, 0, "abcdefghigklim", ST7735_YELLOW, ST7735_BLACK, &Font_8x10);
 						//ST7735_DrawString(0, 20, "abcdefghigklim", ST7735_YELLOW, ST7735_BLACK, &Font_7x10);

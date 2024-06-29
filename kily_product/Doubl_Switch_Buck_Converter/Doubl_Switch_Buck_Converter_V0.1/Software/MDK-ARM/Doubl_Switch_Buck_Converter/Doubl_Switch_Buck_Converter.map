@@ -74,10 +74,7 @@ Section Cross References
     main.o(i.main) refers to stm32g4xx_hal_gpio.o(i.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
     main.o(i.main) refers to st7735.o(i.ST7735_FillScreen) for ST7735_FillScreen
     main.o(i.main) refers to stm32g4xx_hal.o(i.HAL_Delay) for HAL_Delay
-    main.o(i.main) refers to st7735.o(i.ST7735_DrawString) for ST7735_DrawString
     main.o(i.main) refers to st7735.o(i.ST7735_DrawImage) for ST7735_DrawImage
-    main.o(i.main) refers to fonts.o(.constdata) for Font_11x18
-    main.o(i.main) refers to fonts.o(.constdata) for Font_7x10
     main.o(i.main) refers to fonts.o(.constdata) for gImage_011
     gpio.o(i.MX_GPIO_Init) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
     gpio.o(i.MX_GPIO_Init) refers to stm32g4xx_hal_gpio.o(i.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
@@ -566,6 +563,12 @@ Section Cross References
 Removing Unused input sections from the image.
 
     Removing fonts.o(.constdata), (3840 bytes).
+    Removing fonts.o(.constdata), (3800 bytes).
+    Removing fonts.o(.constdata), (6840 bytes).
+    Removing fonts.o(.constdata), (4 bytes).
+    Removing fonts.o(.constdata), (8 bytes).
+    Removing fonts.o(.constdata), (8 bytes).
+    Removing fonts.o(.constdata), (8 bytes).
     Removing fonts.o(.constdata), (8 bytes).
     Removing fonts.o(.constdata), (20000 bytes).
     Removing fonts.o(.constdata), (2700 bytes).
@@ -573,6 +576,8 @@ Removing Unused input sections from the image.
     Removing st7735.o(.rev16_text), (4 bytes).
     Removing st7735.o(.revsh_text), (4 bytes).
     Removing st7735.o(.rrx_text), (6 bytes).
+    Removing st7735.o(i.ST7735_DrawChar), (176 bytes).
+    Removing st7735.o(i.ST7735_DrawString), (74 bytes).
     Removing main.o(.rev16_text), (4 bytes).
     Removing main.o(.revsh_text), (4 bytes).
     Removing main.o(.rrx_text), (6 bytes).
@@ -970,7 +975,7 @@ Removing Unused input sections from the image.
     Removing system_stm32g4xx.o(i.SystemCoreClockUpdate), (108 bytes).
     Removing system_stm32g4xx.o(.constdata), (8 bytes).
 
-404 unused section(s) (total 61712 bytes) removed from the image.
+412 unused section(s) (total 72630 bytes) removed from the image.
 
 ==============================================================================
 
@@ -1007,52 +1012,52 @@ Image Symbol Table
     ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c 0x00000000   Number         0  stm32g4xx_hal_tim.o ABSOLUTE
     ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c 0x00000000   Number         0  stm32g4xx_hal_tim_ex.o ABSOLUTE
     ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_usb.c 0x00000000   Number         0  stm32g4xx_ll_usb.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
-    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
-    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
     ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
     ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
-    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
     ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
     ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr_w.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
     ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
     ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
     ../fplib/fpinit.s                        0x00000000   Number         0  fpinit.o ABSOLUTE
@@ -1184,42 +1189,31 @@ Image Symbol Table
     SPI_WaitFifoStateUntilTimeout            0x080020c9   Thumb Code   218  stm32g4xx_hal_spi.o(i.SPI_WaitFifoStateUntilTimeout)
     i.SPI_WaitFlagStateUntilTimeout          0x080021a8   Section        0  stm32g4xx_hal_spi.o(i.SPI_WaitFlagStateUntilTimeout)
     SPI_WaitFlagStateUntilTimeout            0x080021a9   Thumb Code   180  stm32g4xx_hal_spi.o(i.SPI_WaitFlagStateUntilTimeout)
-    i.ST7735_DrawChar                        0x08002260   Section        0  st7735.o(i.ST7735_DrawChar)
-    i.ST7735_DrawImage                       0x08002310   Section        0  st7735.o(i.ST7735_DrawImage)
-    i.ST7735_DrawRectangle                   0x08002340   Section        0  st7735.o(i.ST7735_DrawRectangle)
-    i.ST7735_DrawString                      0x080023a0   Section        0  st7735.o(i.ST7735_DrawString)
-    i.ST7735_FillScreen                      0x080023ea   Section        0  st7735.o(i.ST7735_FillScreen)
-    i.ST7735_Init                            0x080023fc   Section        0  st7735.o(i.ST7735_Init)
-    i.ST7735_Reset                           0x0800261c   Section        0  st7735.o(i.ST7735_Reset)
-    i.ST7735_SetAddressWindow                0x0800264c   Section        0  st7735.o(i.ST7735_SetAddressWindow)
-    i.ST7735_SetRotation                     0x0800268c   Section        0  st7735.o(i.ST7735_SetRotation)
-    i.ST7735_WriteByte                       0x080026c0   Section        0  st7735.o(i.ST7735_WriteByte)
-    i.ST7735_WriteCommand                    0x080026fc   Section        0  st7735.o(i.ST7735_WriteCommand)
-    i.ST7735_WriteData                       0x08002738   Section        0  st7735.o(i.ST7735_WriteData)
-    i.SVC_Handler                            0x08002778   Section        0  stm32g4xx_it.o(i.SVC_Handler)
-    i.SysTick_Handler                        0x0800277a   Section        0  stm32g4xx_it.o(i.SysTick_Handler)
-    i.SystemClock_Config                     0x0800277e   Section        0  main.o(i.SystemClock_Config)
-    i.SystemInit                             0x080027f0   Section        0  system_stm32g4xx.o(i.SystemInit)
-    i.USB_DevInit                            0x08002800   Section        0  stm32g4xx_ll_usb.o(i.USB_DevInit)
-    i.USB_DisableGlobalInt                   0x08002812   Section        0  stm32g4xx_ll_usb.o(i.USB_DisableGlobalInt)
-    i.UsageFault_Handler                     0x08002822   Section        0  stm32g4xx_it.o(i.UsageFault_Handler)
-    i.__NVIC_SetPriority                     0x08002824   Section        0  stm32g4xx_hal_cortex.o(i.__NVIC_SetPriority)
-    __NVIC_SetPriority                       0x08002825   Thumb Code    32  stm32g4xx_hal_cortex.o(i.__NVIC_SetPriority)
-    i.assert_failed                          0x08002844   Section        0  main.o(i.assert_failed)
-    i.main                                   0x08002848   Section        0  main.o(i.main)
-    x$fpl$fpinit                             0x08002ac0   Section       10  fpinit.o(x$fpl$fpinit)
-    $v0                                      0x08002ac0   Number         0  fpinit.o(x$fpl$fpinit)
-    .constdata                               0x08002acc   Section     3800  fonts.o(.constdata)
-    Font7x10                                 0x08002acc   Data        3800  fonts.o(.constdata)
-    .constdata                               0x080039a4   Section     6840  fonts.o(.constdata)
-    Font11x18                                0x080039a4   Data        6840  fonts.o(.constdata)
-    .constdata                               0x0800545c   Section        4  fonts.o(.constdata)
-    Font_custom                              0x0800545c   Data           4  fonts.o(.constdata)
-    .constdata                               0x08005460   Section        8  fonts.o(.constdata)
-    .constdata                               0x08005468   Section        8  fonts.o(.constdata)
-    .constdata                               0x08005470   Section        8  fonts.o(.constdata)
-    .constdata                               0x08005478   Section     1800  fonts.o(.constdata)
-    .constdata                               0x08005b80   Section       16  system_stm32g4xx.o(.constdata)
+    i.ST7735_DrawImage                       0x08002260   Section        0  st7735.o(i.ST7735_DrawImage)
+    i.ST7735_DrawRectangle                   0x08002290   Section        0  st7735.o(i.ST7735_DrawRectangle)
+    i.ST7735_FillScreen                      0x080022f0   Section        0  st7735.o(i.ST7735_FillScreen)
+    i.ST7735_Init                            0x08002302   Section        0  st7735.o(i.ST7735_Init)
+    i.ST7735_Reset                           0x08002524   Section        0  st7735.o(i.ST7735_Reset)
+    i.ST7735_SetAddressWindow                0x08002554   Section        0  st7735.o(i.ST7735_SetAddressWindow)
+    i.ST7735_SetRotation                     0x08002594   Section        0  st7735.o(i.ST7735_SetRotation)
+    i.ST7735_WriteByte                       0x080025c8   Section        0  st7735.o(i.ST7735_WriteByte)
+    i.ST7735_WriteCommand                    0x08002604   Section        0  st7735.o(i.ST7735_WriteCommand)
+    i.ST7735_WriteData                       0x08002640   Section        0  st7735.o(i.ST7735_WriteData)
+    i.SVC_Handler                            0x08002680   Section        0  stm32g4xx_it.o(i.SVC_Handler)
+    i.SysTick_Handler                        0x08002682   Section        0  stm32g4xx_it.o(i.SysTick_Handler)
+    i.SystemClock_Config                     0x08002686   Section        0  main.o(i.SystemClock_Config)
+    i.SystemInit                             0x080026f8   Section        0  system_stm32g4xx.o(i.SystemInit)
+    i.USB_DevInit                            0x08002708   Section        0  stm32g4xx_ll_usb.o(i.USB_DevInit)
+    i.USB_DisableGlobalInt                   0x0800271a   Section        0  stm32g4xx_ll_usb.o(i.USB_DisableGlobalInt)
+    i.UsageFault_Handler                     0x0800272a   Section        0  stm32g4xx_it.o(i.UsageFault_Handler)
+    i.__NVIC_SetPriority                     0x0800272c   Section        0  stm32g4xx_hal_cortex.o(i.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x0800272d   Thumb Code    32  stm32g4xx_hal_cortex.o(i.__NVIC_SetPriority)
+    i.assert_failed                          0x0800274c   Section        0  main.o(i.assert_failed)
+    i.main                                   0x08002750   Section        0  main.o(i.main)
+    x$fpl$fpinit                             0x080027c4   Section       10  fpinit.o(x$fpl$fpinit)
+    $v0                                      0x080027c4   Number         0  fpinit.o(x$fpl$fpinit)
+    .constdata                               0x080027ce   Section     1800  fonts.o(.constdata)
+    .constdata                               0x08002ed6   Section       16  system_stm32g4xx.o(.constdata)
     .data                                    0x20000000   Section       12  stm32g4xx_hal.o(.data)
     .data                                    0x2000000c   Section        4  system_stm32g4xx.o(.data)
     .bss                                     0x20000010   Section      320  st7735.o(.bss)
@@ -1472,37 +1466,32 @@ Image Symbol Table
     MemManage_Handler                        0x08002079   Thumb Code     2  stm32g4xx_it.o(i.MemManage_Handler)
     NMI_Handler                              0x0800207b   Thumb Code     2  stm32g4xx_it.o(i.NMI_Handler)
     PendSV_Handler                           0x0800207d   Thumb Code     2  stm32g4xx_it.o(i.PendSV_Handler)
-    ST7735_DrawChar                          0x08002261   Thumb Code   170  st7735.o(i.ST7735_DrawChar)
-    ST7735_DrawImage                         0x08002311   Thumb Code    48  st7735.o(i.ST7735_DrawImage)
-    ST7735_DrawRectangle                     0x08002341   Thumb Code    92  st7735.o(i.ST7735_DrawRectangle)
-    ST7735_DrawString                        0x080023a1   Thumb Code    74  st7735.o(i.ST7735_DrawString)
-    ST7735_FillScreen                        0x080023eb   Thumb Code    18  st7735.o(i.ST7735_FillScreen)
-    ST7735_Init                              0x080023fd   Thumb Code   544  st7735.o(i.ST7735_Init)
-    ST7735_Reset                             0x0800261d   Thumb Code    44  st7735.o(i.ST7735_Reset)
-    ST7735_SetAddressWindow                  0x0800264d   Thumb Code    64  st7735.o(i.ST7735_SetAddressWindow)
-    ST7735_SetRotation                       0x0800268d   Thumb Code    50  st7735.o(i.ST7735_SetRotation)
-    ST7735_WriteByte                         0x080026c1   Thumb Code    50  st7735.o(i.ST7735_WriteByte)
-    ST7735_WriteCommand                      0x080026fd   Thumb Code    52  st7735.o(i.ST7735_WriteCommand)
-    ST7735_WriteData                         0x08002739   Thumb Code    56  st7735.o(i.ST7735_WriteData)
-    SVC_Handler                              0x08002779   Thumb Code     2  stm32g4xx_it.o(i.SVC_Handler)
-    SysTick_Handler                          0x0800277b   Thumb Code     4  stm32g4xx_it.o(i.SysTick_Handler)
-    SystemClock_Config                       0x0800277f   Thumb Code   114  main.o(i.SystemClock_Config)
-    SystemInit                               0x080027f1   Thumb Code    12  system_stm32g4xx.o(i.SystemInit)
-    USB_DevInit                              0x08002801   Thumb Code    18  stm32g4xx_ll_usb.o(i.USB_DevInit)
-    USB_DisableGlobalInt                     0x08002813   Thumb Code    16  stm32g4xx_ll_usb.o(i.USB_DisableGlobalInt)
-    UsageFault_Handler                       0x08002823   Thumb Code     2  stm32g4xx_it.o(i.UsageFault_Handler)
-    assert_failed                            0x08002845   Thumb Code     2  main.o(i.assert_failed)
-    main                                     0x08002849   Thumb Code   472  main.o(i.main)
-    _fp_init                                 0x08002ac1   Thumb Code    10  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x08002ac9   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x08002ac9   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    Font_7x10                                0x08005460   Data           8  fonts.o(.constdata)
-    Font_11x18                               0x08005468   Data           8  fonts.o(.constdata)
-    Font_Custom                              0x08005470   Data           8  fonts.o(.constdata)
-    gImage_011                               0x08005478   Data        1800  fonts.o(.constdata)
-    AHBPrescTable                            0x08005b80   Data          16  system_stm32g4xx.o(.constdata)
-    Region$$Table$$Base                      0x08005b90   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08005bb0   Number         0  anon$$obj.o(Region$$Table)
+    ST7735_DrawImage                         0x08002261   Thumb Code    48  st7735.o(i.ST7735_DrawImage)
+    ST7735_DrawRectangle                     0x08002291   Thumb Code    92  st7735.o(i.ST7735_DrawRectangle)
+    ST7735_FillScreen                        0x080022f1   Thumb Code    18  st7735.o(i.ST7735_FillScreen)
+    ST7735_Init                              0x08002303   Thumb Code   544  st7735.o(i.ST7735_Init)
+    ST7735_Reset                             0x08002525   Thumb Code    44  st7735.o(i.ST7735_Reset)
+    ST7735_SetAddressWindow                  0x08002555   Thumb Code    64  st7735.o(i.ST7735_SetAddressWindow)
+    ST7735_SetRotation                       0x08002595   Thumb Code    50  st7735.o(i.ST7735_SetRotation)
+    ST7735_WriteByte                         0x080025c9   Thumb Code    50  st7735.o(i.ST7735_WriteByte)
+    ST7735_WriteCommand                      0x08002605   Thumb Code    52  st7735.o(i.ST7735_WriteCommand)
+    ST7735_WriteData                         0x08002641   Thumb Code    56  st7735.o(i.ST7735_WriteData)
+    SVC_Handler                              0x08002681   Thumb Code     2  stm32g4xx_it.o(i.SVC_Handler)
+    SysTick_Handler                          0x08002683   Thumb Code     4  stm32g4xx_it.o(i.SysTick_Handler)
+    SystemClock_Config                       0x08002687   Thumb Code   114  main.o(i.SystemClock_Config)
+    SystemInit                               0x080026f9   Thumb Code    12  system_stm32g4xx.o(i.SystemInit)
+    USB_DevInit                              0x08002709   Thumb Code    18  stm32g4xx_ll_usb.o(i.USB_DevInit)
+    USB_DisableGlobalInt                     0x0800271b   Thumb Code    16  stm32g4xx_ll_usb.o(i.USB_DisableGlobalInt)
+    UsageFault_Handler                       0x0800272b   Thumb Code     2  stm32g4xx_it.o(i.UsageFault_Handler)
+    assert_failed                            0x0800274d   Thumb Code     2  main.o(i.assert_failed)
+    main                                     0x08002751   Thumb Code   106  main.o(i.main)
+    _fp_init                                 0x080027c5   Thumb Code    10  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x080027cd   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x080027cd   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    gImage_011                               0x080027ce   Data        1800  fonts.o(.constdata)
+    AHBPrescTable                            0x08002ed6   Data          16  system_stm32g4xx.o(.constdata)
+    Region$$Table$$Base                      0x08002ee8   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08002f08   Number         0  anon$$obj.o(Region$$Table)
     uwTickPrio                               0x20000000   Data           4  stm32g4xx_hal.o(.data)
     uwTickFreq                               0x20000004   Data           4  stm32g4xx_hal.o(.data)
     uwTick                                   0x20000008   Data           4  stm32g4xx_hal.o(.data)
@@ -1520,9 +1509,9 @@ Memory Map of the image
 
   Image Entry point : 0x080001d9
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00005bc0, Max: 0x00020000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00002f18, Max: 0x00020000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00005bb0, Max: 0x00020000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00002f08, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1624,49 +1613,42 @@ Memory Map of the image
     0x080020c6   0x080020c6   0x00000002   PAD
     0x080020c8   0x080020c8   0x000000e0   Code   RO          555    i.SPI_WaitFifoStateUntilTimeout  stm32g4xx_hal_spi.o
     0x080021a8   0x080021a8   0x000000b8   Code   RO          556    i.SPI_WaitFlagStateUntilTimeout  stm32g4xx_hal_spi.o
-    0x08002260   0x08002260   0x000000b0   Code   RO           40    i.ST7735_DrawChar   st7735.o
-    0x08002310   0x08002310   0x00000030   Code   RO           41    i.ST7735_DrawImage  st7735.o
-    0x08002340   0x08002340   0x00000060   Code   RO           42    i.ST7735_DrawRectangle  st7735.o
-    0x080023a0   0x080023a0   0x0000004a   Code   RO           43    i.ST7735_DrawString  st7735.o
-    0x080023ea   0x080023ea   0x00000012   Code   RO           44    i.ST7735_FillScreen  st7735.o
-    0x080023fc   0x080023fc   0x00000220   Code   RO           45    i.ST7735_Init       st7735.o
-    0x0800261c   0x0800261c   0x00000030   Code   RO           46    i.ST7735_Reset      st7735.o
-    0x0800264c   0x0800264c   0x00000040   Code   RO           47    i.ST7735_SetAddressWindow  st7735.o
-    0x0800268c   0x0800268c   0x00000032   Code   RO           48    i.ST7735_SetRotation  st7735.o
-    0x080026be   0x080026be   0x00000002   PAD
-    0x080026c0   0x080026c0   0x0000003c   Code   RO           49    i.ST7735_WriteByte  st7735.o
-    0x080026fc   0x080026fc   0x0000003c   Code   RO           50    i.ST7735_WriteCommand  st7735.o
-    0x08002738   0x08002738   0x00000040   Code   RO           51    i.ST7735_WriteData  st7735.o
-    0x08002778   0x08002778   0x00000002   Code   RO          408    i.SVC_Handler       stm32g4xx_it.o
-    0x0800277a   0x0800277a   0x00000004   Code   RO          409    i.SysTick_Handler   stm32g4xx_it.o
-    0x0800277e   0x0800277e   0x00000072   Code   RO          246    i.SystemClock_Config  main.o
-    0x080027f0   0x080027f0   0x00000010   Code   RO         2855    i.SystemInit        system_stm32g4xx.o
-    0x08002800   0x08002800   0x00000012   Code   RO         2711    i.USB_DevInit       stm32g4xx_ll_usb.o
-    0x08002812   0x08002812   0x00000010   Code   RO         2712    i.USB_DisableGlobalInt  stm32g4xx_ll_usb.o
-    0x08002822   0x08002822   0x00000002   Code   RO          410    i.UsageFault_Handler  stm32g4xx_it.o
-    0x08002824   0x08002824   0x00000020   Code   RO         2254    i.__NVIC_SetPriority  stm32g4xx_hal_cortex.o
-    0x08002844   0x08002844   0x00000002   Code   RO          247    i.assert_failed     main.o
-    0x08002846   0x08002846   0x00000002   PAD
-    0x08002848   0x08002848   0x00000278   Code   RO          248    i.main              main.o
-    0x08002ac0   0x08002ac0   0x0000000a   Code   RO         2982    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x08002aca   0x08002aca   0x00000002   PAD
-    0x08002acc   0x08002acc   0x00000ed8   Data   RO           11    .constdata          fonts.o
-    0x080039a4   0x080039a4   0x00001ab8   Data   RO           12    .constdata          fonts.o
-    0x0800545c   0x0800545c   0x00000004   Data   RO           13    .constdata          fonts.o
-    0x08005460   0x08005460   0x00000008   Data   RO           14    .constdata          fonts.o
-    0x08005468   0x08005468   0x00000008   Data   RO           15    .constdata          fonts.o
-    0x08005470   0x08005470   0x00000008   Data   RO           17    .constdata          fonts.o
-    0x08005478   0x08005478   0x00000708   Data   RO           19    .constdata          fonts.o
-    0x08005b80   0x08005b80   0x00000010   Data   RO         2856    .constdata          system_stm32g4xx.o
-    0x08005b90   0x08005b90   0x00000020   Data   RO         3052    Region$$Table       anon$$obj.o
+    0x08002260   0x08002260   0x00000030   Code   RO           41    i.ST7735_DrawImage  st7735.o
+    0x08002290   0x08002290   0x00000060   Code   RO           42    i.ST7735_DrawRectangle  st7735.o
+    0x080022f0   0x080022f0   0x00000012   Code   RO           44    i.ST7735_FillScreen  st7735.o
+    0x08002302   0x08002302   0x00000220   Code   RO           45    i.ST7735_Init       st7735.o
+    0x08002522   0x08002522   0x00000002   PAD
+    0x08002524   0x08002524   0x00000030   Code   RO           46    i.ST7735_Reset      st7735.o
+    0x08002554   0x08002554   0x00000040   Code   RO           47    i.ST7735_SetAddressWindow  st7735.o
+    0x08002594   0x08002594   0x00000032   Code   RO           48    i.ST7735_SetRotation  st7735.o
+    0x080025c6   0x080025c6   0x00000002   PAD
+    0x080025c8   0x080025c8   0x0000003c   Code   RO           49    i.ST7735_WriteByte  st7735.o
+    0x08002604   0x08002604   0x0000003c   Code   RO           50    i.ST7735_WriteCommand  st7735.o
+    0x08002640   0x08002640   0x00000040   Code   RO           51    i.ST7735_WriteData  st7735.o
+    0x08002680   0x08002680   0x00000002   Code   RO          408    i.SVC_Handler       stm32g4xx_it.o
+    0x08002682   0x08002682   0x00000004   Code   RO          409    i.SysTick_Handler   stm32g4xx_it.o
+    0x08002686   0x08002686   0x00000072   Code   RO          246    i.SystemClock_Config  main.o
+    0x080026f8   0x080026f8   0x00000010   Code   RO         2855    i.SystemInit        system_stm32g4xx.o
+    0x08002708   0x08002708   0x00000012   Code   RO         2711    i.USB_DevInit       stm32g4xx_ll_usb.o
+    0x0800271a   0x0800271a   0x00000010   Code   RO         2712    i.USB_DisableGlobalInt  stm32g4xx_ll_usb.o
+    0x0800272a   0x0800272a   0x00000002   Code   RO          410    i.UsageFault_Handler  stm32g4xx_it.o
+    0x0800272c   0x0800272c   0x00000020   Code   RO         2254    i.__NVIC_SetPriority  stm32g4xx_hal_cortex.o
+    0x0800274c   0x0800274c   0x00000002   Code   RO          247    i.assert_failed     main.o
+    0x0800274e   0x0800274e   0x00000002   PAD
+    0x08002750   0x08002750   0x00000074   Code   RO          248    i.main              main.o
+    0x080027c4   0x080027c4   0x0000000a   Code   RO         2982    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x080027ce   0x080027ce   0x00000708   Data   RO           19    .constdata          fonts.o
+    0x08002ed6   0x08002ed6   0x00000010   Data   RO         2856    .constdata          system_stm32g4xx.o
+    0x08002ee6   0x08002ee6   0x00000002   PAD
+    0x08002ee8   0x08002ee8   0x00000020   Data   RO         3052    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08005bb0, Size: 0x00000af0, Max: 0x00020000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08002f08, Size: 0x00000af0, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08005bb0   0x0000000c   Data   RW          890    .data               stm32g4xx_hal.o
-    0x2000000c   0x08005bbc   0x00000004   Data   RW         2858    .data               system_stm32g4xx.o
+    0x20000000   0x08002f08   0x0000000c   Data   RW          890    .data               stm32g4xx_hal.o
+    0x2000000c   0x08002f14   0x00000004   Data   RW         2858    .data               system_stm32g4xx.o
     0x20000010        -       0x00000140   Zero   RW           52    .bss                st7735.o
     0x20000150        -       0x00000064   Zero   RW          321    .bss                spi.o
     0x200001b4        -       0x000002dc   Zero   RW          363    .bss                usb.o
@@ -1682,11 +1664,11 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-         0          0      12468          0          0       6062   fonts.o
+         0          0       1800          0          0       6062   fonts.o
        264         18          0          0          0       1199   gpio.o
-       752        160          0          0          0       2988   main.o
+       236         10          0          0          0       2872   main.o
        180         20          0          0        100       1993   spi.o
-      1302         40          0          0        320     805329   st7735.o
+      1052         34          0          0        320     803347   st7735.o
         64         26        472          0       1536        916   startup_stm32g474xx.o
        162         24          0         12          0       4837   stm32g4xx_hal.o
        360        136          0          0          0      33634   stm32g4xx_hal_cortex.o
@@ -1704,9 +1686,9 @@ Image component sizes
        128         18          0          0        732       1942   usb.o
 
     ----------------------------------------------------------------------
-     10114       1126      12988         16       2688     889534   Object Totals
+      9350        970       2322         16       2688     887436   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        12          0          0          0          0          0   (incl. Padding)
+        14          0          2          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -1736,8 +1718,8 @@ Image component sizes
         10          0          0          0          0        116   fpinit.o
 
     ----------------------------------------------------------------------
-       370         16          0          0         96        780   Library Totals
-         6          0          0          0          0          0   (incl. Padding)
+       368         16          0          0         96        780   Library Totals
+         4          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -1747,7 +1729,7 @@ Image component sizes
         10          0          0          0          0        116   fz_wm.l
 
     ----------------------------------------------------------------------
-       370         16          0          0         96        780   Library Totals
+       368         16          0          0         96        780   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -1756,15 +1738,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     10484       1142      12988         16       2784     884806   Grand Totals
-     10484       1142      12988         16       2784     884806   ELF Image Totals
-     10484       1142      12988         16          0          0   ROM Totals
+      9718        986       2322         16       2784     882908   Grand Totals
+      9718        986       2322         16       2784     882908   ELF Image Totals
+      9718        986       2322         16          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                23472 (  22.92kB)
+    Total RO  Size (Code + RO Data)                12040 (  11.76kB)
     Total RW  Size (RW Data + ZI Data)              2800 (   2.73kB)
-    Total ROM Size (Code + RO Data + RW Data)      23488 (  22.94kB)
+    Total ROM Size (Code + RO Data + RW Data)      12056 (  11.77kB)
 
 ==============================================================================
 
