@@ -1,0 +1,4 @@
+/home/kily/kily/mi_motor/资料/MyMotorTool/build/CMakeFiles/rebuild_cache.dir
+/home/kily/kily/mi_motor/资料/MyMotorTool/build/CMakeFiles/edit_cache.dir
+/home/kily/kily/mi_motor/资料/MyMotorTool/build/CMakeFiles/MyMotorTool.dir
+/home/kily/kily/mi_motor/资料/MyMotorTool/build/CMakeFiles/MyMotorTool_autogen.dir

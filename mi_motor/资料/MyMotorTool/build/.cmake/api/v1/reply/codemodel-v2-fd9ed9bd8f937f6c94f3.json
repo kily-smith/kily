@@ -1,0 +1,68 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "MyMotorTool",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "MyMotorTool::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MyMotorTool-Debug-78a88b374d1b0bd6a880.json",
+					"name" : "MyMotorTool",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MyMotorTool_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MyMotorTool_autogen-Debug-12d762bfb0da9e5c02e2.json",
+					"name" : "MyMotorTool_autogen",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/kily/kily/mi_motor/资料/MyMotorTool/build",
+		"source" : "/home/kily/kily/mi_motor/资料/MyMotorTool"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

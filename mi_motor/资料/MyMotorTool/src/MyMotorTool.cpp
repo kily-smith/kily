@@ -1224,12 +1224,16 @@ void MyMotorTool::make_contorl_canframe()
     float KP_MAX = ui->spin_kp_max->value();
     float KP_MIN = 0;
 
+
+    //将kp，kd，torque，pos，vel等值，使用float_to_uint函数，转换为一个整型的值。
     int p_int = float_to_uint(ui->spin_pos->value(), P_MIN, P_MAX, 16);
     int v_int = float_to_uint(ui->spin_vel->value(), V_MIN, V_MAX, 12);
     int kp_int = float_to_uint(ui->spin_kp->value(), KP_MIN, KP_MAX, 12);
     int kd_int = float_to_uint(ui->spin_kd->value(), KD_MIN, KD_MAX, 12);
-    int tq_int = float_to_uint(ui->spin_torque->value(), -I_MAX*KT*GR, I_MAX*KT*GR, 12);
+    int tq_int = float_to_uint(ui->spin_torque->value(), -I_MAX*KT*GR, I_MAX*KT*GR, 12);            
     
+
+    //将转换好的整型的值打包进CAN的Frame中
     unsigned char* data = control_canframe.data;
     data[0] = p_int >> 8;
     data[1] = p_int & 0xff;
@@ -1330,6 +1334,8 @@ bool MyMotorTool::valueChange(QSlider* slider,QDoubleSpinBox* spin)
         return false;
     }
 }
+
+
 void MyMotorTool::make_zero_contorl_canframe()
 {
     int p_int = float_to_uint(0, -12.5, 12.5, 16);
